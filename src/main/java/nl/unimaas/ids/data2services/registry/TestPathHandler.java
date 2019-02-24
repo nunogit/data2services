@@ -98,18 +98,20 @@ public class TestPathHandler extends AbstractPathHandler{
                }
                System.out.println(sQuery);
                
-               String finalQuery = sQuery;
-            //   String[] queryLines = sQuery.split("\n");
-            //   for(String queryLine : queryLines){
-             //      for(QueryVariable queryVariable : queryVariableList){
-             //          if(queryLine.startsWith("?!="+queryVariable.getRawValue())){
-             //  
-             //          } else {
-             //              queryLine = queryLine.replaceFirst("?!="+queryVariable.getRawValue(), sQuery);
-             //              finalQuery += queryLine+"\n";
-             //          }
-             //      }
-              // }               
+               String finalQuery = "";//sQuery;
+            
+               String[] queryLines = sQuery.split("\n");
+               for(String queryLine : queryLines){
+                   for(QueryVariable queryVariable : queryVariableList){
+                       
+                       if(queryLine.startsWith("?!="+queryVariable.getRawValue())){
+               
+                       } else {
+                           queryLine = queryLine.replaceFirst("\\?!=[a-zA-Z0-9_]+", "");
+                           finalQuery += queryLine+"\n";
+                       }
+                   }
+               }               
                
                //prepare hashmap
                HashMap<String, String> headers = new HashMap<String, String>();

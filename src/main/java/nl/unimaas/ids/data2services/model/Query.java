@@ -18,6 +18,7 @@ public class Query {
     private String path;
     private List<QueryVariable> variableNameList = new ArrayList<QueryVariable>();
     private List<String> tagList = new ArrayList<String>();
+    private String description;
 
     
     public List<QueryVariable> getVariables(){
@@ -94,5 +95,13 @@ public class Query {
 
     public List<String> getTagList() {
         return this.tagList;
+    }
+
+    public void setDescription(String description){
+        this.description = description;
+    }
+    
+    public String getDescription() {
+       return this.description;
     }
 }

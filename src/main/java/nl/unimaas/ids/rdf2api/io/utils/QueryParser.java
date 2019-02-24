@@ -79,6 +79,7 @@ public class QueryParser {
                 }
             }
             
+            query.setDescription(rawQuery);
             query.setRawQuery(rawQuery);
             
             List<QueryVariable> variableList = parseVariables(rawQuery);

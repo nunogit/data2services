@@ -35,7 +35,7 @@ SELECT ?source ?class ?classLabel ?count
 WHERE
 {
     {
-        SELECT ?source ?class (count(?class) as ?count)  
+?!=drugbank       SELECT ?source ?class (count(?class) as ?count) 
         WHERE {
             ?dataset a dctypes:Dataset ; idot:preferredPrefix ?source .
             ?version dct:isVersionOf ?dataset ; dcat:distribution [ a void:Dataset ; dcat:accessURL ?graph ] . 

@@ -206,6 +206,7 @@ public class SwaggerManager {
             operation.addParameter(parameter3);
             operation.description("operation description");
             
+            
             Path path = new Path();
             path.setGet(operation);
             
@@ -286,7 +287,8 @@ public class SwaggerManager {
          //String[] pathSegments = (sPath.charAt(0) == '/' ? sPath.substring(1) : sPath).split("/");        
          Operation operation = new Operation();
          
-         operation.setDescription(query.getLabel());
+         operation.setDescription(query.getDescription());
+         operation.setSummary(query.getLabel());
          
          for(QueryVariable queryVariable : variableList2){
       
@@ -314,8 +316,6 @@ public class SwaggerManager {
             
             Path path = new Path();
             path.setGet(operation);
-            
-            
             
             String sRealm = realm.getRealm().isPresent() ? "/"+ realm.getRealm().get() : "";
             swagger.path( sRealm + sPath, path);
