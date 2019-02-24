@@ -39,8 +39,7 @@ public class ReadEntitiesFromEndPoint {
 	private String endpointURL;
 
 	public static void main(String[] args) {
-		System.out.println("Starting...");
-		ReadEntitiesFromEndPoint entities = new ReadEntitiesFromEndPoint();
+                ReadEntitiesFromEndPoint entities = new ReadEntitiesFromEndPoint();
 
 		//String e = entities.getClassList();
 		//System.out.println(e);
@@ -129,8 +128,8 @@ public class ReadEntitiesFromEndPoint {
 					BindingSet solution = result.next();
 					// ... and print out the value of the variable bindings
 					// for ?s and ?n
-					System.out.println("?s = " + solution.getValue("s"));
-					System.out.println("?n = " + solution.getValue("n"));
+					//System.out.println("?s = " + solution.getValue("s"));
+					//System.out.println("?n = " + solution.getValue("n"));
 				}
 			}
 		} finally {
@@ -220,7 +219,7 @@ public class ReadEntitiesFromEndPoint {
                 Logger.getLogger(ReadEntitiesFromEndPoint.class.getName()).log(Level.SEVERE, null, ex);
         }
 
-        System.out.println(result);
+        //System.out.println(result);
 
         return result;
     }

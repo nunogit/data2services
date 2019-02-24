@@ -21,7 +21,7 @@ public class RegistryPathHandler {
     
     public void registerHandler(AbstractPathHandler ph){
         ServiceRealm realm = ph.getServiceRealm();
-        System.out.println("realm "+ realm.getRealm().get());
+        //System.out.println("realm "+ realm.getRealm().get());
         phMap.put(realm.getRealm().get(), ph);
     }
         

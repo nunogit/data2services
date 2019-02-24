@@ -94,8 +94,7 @@ public class TestPathHandler extends AbstractPathHandler{
                
                
                for(QueryVariable queryVariable : queryVariableList){
-                   System.out.println(">>>>>    "+ queryVariable.getId() + " " + queryVariable.getValue());
-                   sQuery = sQuery.replaceAll("\\?_"+ queryVariable.getId(),  queryVariable.getValue());
+                     sQuery = sQuery.replaceAll("\\?_"+ queryVariable.getId(),  queryVariable.getValue());
                }
                System.out.println(sQuery);
                
@@ -166,7 +165,6 @@ public class TestPathHandler extends AbstractPathHandler{
            
            for(String key: map.keySet()){
                String value = map.get(key);
-               System.out.println(">>>>>>>>>>>>>> replacing " + key + " with " + value);
                response = response.replaceAll(Pattern.quote(value), key);
            }
            
@@ -191,7 +189,7 @@ public class TestPathHandler extends AbstractPathHandler{
                 String modelPathElementString = modelPathElementList.get(i).getLabel();
                 String requestedPathElementString = requestedPathElementList.get(i).getLabel();
                 
-                System.out.println("comparing -"+modelPathElementString + "- and -" + requestedPathElementString + "-");
+               // System.out.println("comparing -"+modelPathElementString + "- and -" + requestedPathElementString + "-");
                 
                 if( ! modelPathElementString.equals(requestedPathElementString) )
                     return false;
@@ -201,7 +199,7 @@ public class TestPathHandler extends AbstractPathHandler{
     }
     
     private List<PathElement> decomposePath(String path){
-        System.out.println("decomposing path "+ path + "<-");
+       // System.out.println("decomposing path "+ path + "<-");
         System.out.flush();
         path = path.charAt(0) == '/' ? path.substring(1) : path;
             
@@ -239,7 +237,7 @@ public class TestPathHandler extends AbstractPathHandler{
             if(i>0){
                 System.out.println(line[i]);
                 str = line[i].split("\t");
-                System.out.println(">>>>> "+ str[0] +" - " + str[1]);
+                //System.out.println(">>>>> "+ str[0] +" - " + str[1]);
                 map.put(str[0], str[1]);
             }
         }

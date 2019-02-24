@@ -35,7 +35,6 @@ public class Config {
     private Properties configFile;
     
     public static void main(String argv[]){
-        System.out.println();
         System.out.println("a "+(new Config()).getProperty("usera"));
     }
 

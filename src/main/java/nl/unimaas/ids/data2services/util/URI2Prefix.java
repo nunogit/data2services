@@ -30,8 +30,6 @@ public class URI2Prefix {
             //System.out.println(i);
 
             String arr[] = str[i].split("\t");
-            System.out.println(arr[0] + " " + i + " " + arr[1]);
-            System.out.flush();
             
             URI2Prefix.prefixToUri.put(arr[0], arr[1]);
             URI2Prefix.uriToPrefix.put(arr[1], arr[0]);

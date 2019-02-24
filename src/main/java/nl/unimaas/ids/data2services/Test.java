@@ -21,7 +21,7 @@ public class Test {
             RegistryPathHandler registryPathHandler = new RegistryPathHandler();
             registryPathHandler.registerHandler(new TestPathHandler());
             
-            System.out.println("testing..");
+            //System.out.println("testing..");
             System.out.println(swaggerTest.getSwaggerJson());
 	}
 
